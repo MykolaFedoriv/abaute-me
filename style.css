@@ -1,0 +1,297 @@
+/* Контейнер для слайдера */
+.slider-container {
+    position: relative;
+    max-width: 100%; /* Максимальна ширина контейнера */
+    overflow: hidden; /* Приховує все, що виходить за межі контейнера */
+    margin: auto; /* Центрує слайдер */
+    position: absolute; 
+    top: 300px;
+    
+  }
+  
+  /* Слайди */
+  .slides {
+    display: flex; /* Вирівнює слайди в рядок */
+    transition: transform 0.5s ease-in-out; /* Анімація переходу між слайдами */
+    
+  }
+  
+  .slide {
+    min-width: 100%; /* Кожен слайд займатиме 100% ширини контейнера */
+    box-sizing: border-box; /* Враховує padding та border у розмірах елемента */
+    padding: 1px 500px;
+    
+  }
+  
+  .slide img {
+    width: 500px; /* Зображення займає всю ширину слайду */
+    display: block;
+    
+  }
+  
+  /* Кнопки навігації */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    border: none;
+    z-index: 100;
+  }
+  
+  .prev {
+  
+  
+    left: 400px;
+  }
+  
+  .next {
+    right: 400px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .slide img {
+
+    object-fit: cover; /* Забезпечує збереження пропорцій зображення */
+    object-position: center; /* Місце розташування зображення всередині контейнера */
+    display: block;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Inter:wght@100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap');
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #b8b5b5;
+      color: #fff;
+      padding: 50px 0;
+    }
+    
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    header h1 {
+      float: left;
+    }
+    
+    nav {
+      float: right;
+    }
+    
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-left: 20px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+  
+    .button{
+      position: absolute;
+      top: 20px;
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid #b8b5b5;
+      background-color: #b8b5b5;
+    }
+    .btn{
+      display: block;
+      padding: 14px 10px;
+      color: white;
+      text-decoration: none;
+      font-family: "Gupter", serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+    .button1{
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid #b8b5b5;
+      background-color: #b8b5b5;
+      position: absolute;
+      left: 250px;
+      top: 20px;
+    }
+    .btn1{
+      display: block;
+      padding: 14px 10px;
+      color: white;
+      text-decoration: none;
+      position: absolute;
+      font-family: "Gupter", serif;
+    font-weight: 500;
+    font-style: normal;
+      
+    }
+    .button2{
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      border: 1px solid #393838;
+      background-color: #323131;
+      position: absolute;
+      left: 85%;
+      top: 20px;
+    }
+    .btn2{
+      display: block;
+      padding: 14px 25px;
+      color: white;
+      text-decoration: none;
+      position: absolute;
+      font-family: "Gupter", serif;
+    font-weight: 500;
+    font-style: normal;
+      
+    }
+    h1{
+      position: absolute;
+      top: 5px;
+      left: 600px;
+      color: rgb(179, 74, 74);
+      font-family: "Gupter", serif;
+    font-weight: 500;
+    font-style: normal;
+    }
+  
+  
+    .btn{
+      color: rgb(255, 255, 255); /* Початковий колір тексту */
+      transition: color 0.5s; /* Анімація зміни кольору */
+  }
+  
+  .btn:hover {
+      color: red; /* Колір тексту при наведенні */
+  }
+  .btn1{
+      color: rgb(255, 255, 255); /* Початковий колір тексту */
+      transition: color 0.5s; /* Анімація зміни кольору */
+  }
+  
+  .btn1:hover {
+      color: red; /* Колір тексту при наведенні */
+  }
+  
+  
+  .btn{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+  }
+  
+  .btn::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px; /* Відстань від тексту до лінії */
+      width: 100%;
+      height: 2px;
+      background-color: rgb(226, 82, 10);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+  }
+  
+  .btn:hover::after {
+      transform: scaleX(1);
+  }
+  
+  
+  
+  
+  
+  
+  .btn1{
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+  }
+  
+  .btn1::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px; /* Відстань від тексту до лінії */
+      width: 100%;
+      height: 2px;
+      background-color: rgb(226, 82, 10);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+  }
+  
+  .btn1:hover::after {
+      transform: scaleX(1);}
+      .el1{
+        position: absolute;
+        left: 65%;
+     top: 1px;
+     margin: 0;
+      }
+      .fade-in{
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+      }
+      .fahter{
+        background-color: #606060;
+        width: 100%;
+        height: 500px;
+      }
+      .button3{
+        width: 100px;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid #717171;
+        background-color: #717171;
+        position: absolute;
+        left: 47%;
+        top: 850px;
+      }
+      .btn3{
+        display: block;
+        padding: 14px 25px;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        font-family: "Gupter", serif;
+      font-weight: 500;
+      font-style: normal;
+        
+      }
+.el2{
+  font-size: 40px;
+  position: absolute;
+  top: 200px;
+  left: 400px;
+  font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        
+}
